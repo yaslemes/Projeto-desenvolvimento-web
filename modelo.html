@@ -1,32 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto DW</title>
+    <title>Projeto de Desenvolvimento Web</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&display=swap');
-        .fonte_princ{
-        font-family: "Fira Sans", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        }
-        .container{
+        body {
             margin: 0;
-            padding: 0;
-            width: 100vw;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100vh;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button i {
+            font-size: 24px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .theme-toggle {
+            display: flex;
+            position: fixed;
+            right: 20px;
+            bottom: 700px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            cursor: pointer;
+        
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode button {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        body.dark-mode button i {
+            color: #000000;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div>
-            <h1 class="fonte_princ">Lista de Tarefas </h1>
-            <div>
-                <input type="text">
-            </div>
+        <h1>Lista de Tarefas</h1>
+        <input type="text" placeholder="Adicionar tarefa">
+        <div class="theme-toggle" id="toggle-theme">
+            <i class="fas fa-moon"></i> 
         </div>
     </div>
+
+    <script>
+        const botaoTema = document.getElementById("toggle-theme");
+
+        botaoTema.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            const temaEscuro = document.body.classList.contains("dark-mode");
+            localStorage.setItem("tema", temaEscuro ? "escuro" : "claro");
+
+            const icone = document.querySelector("#toggle-theme i");
+            if (temaEscuro) {
+                icone.classList.remove("fa-moon");
+                icone.classList.add("fa-sun");
+            } else {
+                icone.classList.remove("fa-sun");
+                icone.classList.add("fa-moon");
+            }
+        });
+
+        window.addEventListener("load", () => {
+            const temaSalvo = localStorage.getItem("tema");
+            if (temaSalvo === "escuro") {
+                document.body.classList.add("dark-mode");
+
+                const icone = document.querySelector("#toggle-theme i");
+                icone.classList.remove("fa-moon");
+                icone.classList.add("fa-sun");
+            }
+        });
+    </script>
 </body>
 </html>
