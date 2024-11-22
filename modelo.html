@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto de Desenvolvimento Web</title>
+    <title>Lista de Tarefas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corinthia:wght@400;700&family=Fira+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            color: #000000;
-            background-image: url('imagens/white.png'); 
-            background-size: cover;
             font-family: "Corinthia", cursive;
+            color: #000000;
+            background-image: url('imagens/white.png');
+            background-size: cover;
             font-weight: 700;
-            font-style: normal;
             font-size: 1.5rem;
-           
         }
 
         .container {
@@ -27,22 +27,29 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
-            
+        }
+
+        .adicionar {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+            margin-top: 20px;
         }
 
         input {
+            flex: 1;
             padding: 10px;
-            margin: 20px 0;
             font-size: 1rem;
             background-color: #000000;
             color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        button {
-            padding: 10px;
-            background-color: #000000;
+        button.mais {
+            padding: 8px;
             color: #ffffff;
-            border: none;
+            border: solid black .0625rem;
             border-radius: 5px;
             cursor: pointer;
             display: flex;
@@ -50,11 +57,12 @@
             justify-content: center;
         }
 
-        button i {
-            font-size: 24px;
+        button.mais img {
+            width: 24px;
+            height: 24px;
         }
 
-        button:hover {
+        button.mais:hover {
             opacity: 0.8;
         }
 
@@ -63,26 +71,19 @@
             position: fixed;
             right: 20px;
             bottom: 700px;
-            justify-content: flex-start;
-            align-items: flex-start;
             cursor: pointer;
-            height: 8px;
-
-        
         }
 
         body.dark-mode {
-            background-image: url(imagens/dark.png);
+            background-image: url('imagens/dark.png');
             color: #ffffff;
         }
 
         body.dark-mode button {
-        
             color: #000000;
         }
 
         body.dark-mode button i {
-            
             color: #000000;
         }
     </style>
@@ -90,8 +91,11 @@
 <body>
     <div class="container">
         <h1>Lista de Tarefas</h1>
-        <div>
+        <div class="adicionar">
             <input type="text" placeholder="Adicionar tarefa">
+            <button class="mais">
+                <img src="imagens/mais.png" alt="Adicionar">
+            </button>
         </div>
         <div class="theme-toggle" id="toggle-theme">
             <i class="fas fa-moon"></i> 
@@ -99,7 +103,7 @@
     </div>
 
     <script>
-        // Temas claro e escuro 
+        // Tema claro e escuro
         const botaoTema = document.getElementById("toggle-theme");
 
         botaoTema.addEventListener("click", () => {
@@ -117,6 +121,7 @@
             }
         });
 
+        // Carregar o tema salvo
         window.addEventListener("load", () => {
             const temaSalvo = localStorage.getItem("tema");
             if (temaSalvo === "escuro") {
@@ -127,6 +132,7 @@
                 icone.classList.add("fa-sun");
             }
         });
+
     </script>
 </body>
 </html>
