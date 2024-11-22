@@ -24,7 +24,6 @@
             align-items: center;
             font-size: 70px;
             margin-bottom: 10px;
-        
         }
 
         .container {
@@ -158,16 +157,22 @@
         </div>
     </div>
 
+    <!-- Modal -->
     <div class="modal" id="nossoModal">
         <div class="modal-content">
             <span class="fechar-modal" id="fecharModal">&times;</span>
             <h2>oii isa</h2>
+            <p>Para entrar em contato, clique no link abaixo:</p>
+            <a href="https://wa.me/5541996386250" target="_blank">
+                <button class="mais">
+                    <img src="imagens/whatsapp.png" alt="WhatsApp">
+                    Enviar mensagem no WhatsApp
+                </button>
+            </a>
         </div>
     </div>
 
     <script>
-
-        //TEMA DARK AND WHITE
         const botaoTema = document.getElementById("toggle-theme");
 
         botaoTema.addEventListener("click", () => {
@@ -186,8 +191,6 @@
                 document.querySelector("#toggle-theme i").className = "fas fa-sun";
             }
         });
-
-        // MODAL DE ATALHO CTRL + H 
 
         const modal = document.getElementById("nossoModal");
         const fecharModal = document.getElementById("fecharModal");
