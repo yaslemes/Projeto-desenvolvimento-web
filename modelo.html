@@ -141,6 +141,7 @@
             width: 18px;
             height: 18px;
             cursor: pointer; 
+            margin-left: .25rem;
         }
         .modal-container {
             display: none;
@@ -334,18 +335,30 @@
                     const lixeira = document.createElement('img');
                     lixeira.src = 'imagens/lixeira.png';
                     lixeira.alt = 'lixeira';
+
+                    // adiciona o editar
+                    const editar = document.createElement('img');
+                    editar.src = 'imagens/lapis.png';
+                    editar.alt = 'lapis';
         
                 lixeira.addEventListener('click', () => {
                     li.remove();
         });
 
             li.appendChild(lixeira);
+            li.appendChild(editar)
+            const iconesContainer = document.createElement('div');
+            iconesContainer.appendChild(editar);
+            iconesContainer.appendChild(lixeira);
+            li.appendChild(iconesContainer);
+
 
         const taskList = document.getElementById('taskList');
         taskList.appendChild(li);
         taskInput.value = '';
-    }
-}
+            }
+        }
+        // criação e utilização do modal
         const modal = document.getElementById("nossoModal");
         const fecharModal = document.getElementById("fecharModal");
 
