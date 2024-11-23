@@ -1,6 +1,8 @@
 <p align="baseline">Olá! Somos estudantes e estamos cursando o Técnico em Informática para Internet 
   da UTFPR de Campo Mourão.</p>
 
+<img align="baseline" alt="Study GIF" height="190px" src="./src/study.gif">
+
 <h2 align="baseline">Lista de Tarefas</h2>
 
 <p align="baseline">Este projeto foi desenvolvido como parte da disciplina <strong>Desenvolvimento Web 1</strong>, ministrada pelo professor Rafael Liberato, no curso Técnico em Informática para Internet da UTFPR - Campo Mourão.</p>
@@ -18,7 +20,14 @@
   <li><strong>Modo Claro/Escuro</strong> - 🌗 Interface personalizável para o usuário.</li>
 </ul>
 
-<h3 align="baseline">Autoras</h3>
+<h3 align="baseline">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </svg>
+  Autoras
+</h3>
+
 <p align="baseline">👩‍💻 Yasmym Lemes & Isabely Turquino</p>
 
 <h3 align="baseline">Linguagens Utilizadas</h3>
