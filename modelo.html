@@ -193,6 +193,67 @@
         .dark-mode .fechar-modal img {
             filter: invert(1);
         }
+
+        
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .adicionar input {
+                width: 80%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            ul {
+                width: 100%;
+            }
+
+            li {
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            .theme-toggle {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .modal-content {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 1.25rem;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .adicionar input {
+                width: 90%;
+            }
+
+            li {
+                font-size: 0.875rem;
+            }
+
+            .modal-content {
+                height: 400px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -241,7 +302,6 @@
         });
 
         window.addEventListener("load", () => {
-            // Garante que o modal começa oculto assim que a página carregar
             const modal = document.getElementById("nossoModal");
             modal.style.display = "none";
 
