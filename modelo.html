@@ -24,7 +24,7 @@
             align-items: center;
             font-size: 78px;
         }
-
+        
         .container {
             display: flex;
             flex-direction: column;
@@ -34,7 +34,30 @@
             text-align: center;
             padding: 20px;
         }
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            top: 20px;
+        }
+        
+        .theme-toggle i {
+            font-size: 1.25rem;
+        }
 
+        body.dark-mode {
+            background-image: url('imagens/dark.png');
+            color: #ffffff;
+        }
+
+        body.dark-mode button {
+            color: #000000;
+        }
+
+        body.dark-mode button i {
+            color: #000000;
+        }
         .adicionar {
             display: flex;
             align-items: center;
@@ -77,30 +100,6 @@
             opacity: 0.8;
         }
 
-        .theme-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            cursor: pointer;
-            top: 20px;
-        }
-
-        .theme-toggle i {
-            font-size: 1.25rem;
-        }
-
-        body.dark-mode {
-            background-image: url('imagens/dark.png');
-            color: #ffffff;
-        }
-
-        body.dark-mode button {
-            color: #000000;
-        }
-
-        body.dark-mode button i {
-            color: #000000;
-        }
 
         ul {
             display: flex;
@@ -114,7 +113,7 @@
             flex-direction: column;
             list-style: none; 
             padding: 0; 
-            margin: 0; 
+            margin: 10px; 
             width: 100%;
             max-width: 23rem;
             align-items: center;
@@ -122,18 +121,27 @@
         }
 
         li {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
             border: solid 1px black;
             background-color: white;
-            margin: 5px 0;
+            margin-top: 6px;
+            padding: 5px 10px;
             list-style-type: none;
             width: 23rem;
             border-radius: 4px;
-            height: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            word-break: break-all;
+            white-space: normal;
+            min-height: 1.5625rem;
+            box-sizing: border-box; 
         }
 
+        li img {
+            width: 18px;
+            height: 18px;
+            cursor: pointer; 
+        }
         .modal-container {
             display: none;
             position: fixed;
@@ -290,6 +298,7 @@
     </div>
 
     <script>
+        // mudança de tema
         const botaoTema = document.getElementById("toggle-theme");
 
         botaoTema.addEventListener("click", () => {
@@ -311,22 +320,32 @@
                 document.querySelector("#toggle-theme i").className = "fas fa-sun";
             }
         });
-
+        // função de adicionar e deletar as tarefas (lixeira) 
         function addTask() {
             const taskInput = document.getElementById('taskInput');
             const taskText = taskInput.value.trim();
 
-            if (taskText !== '') {
-                const li = document.createElement('li');
-                li.textContent = taskText;
+                if (taskText !== '') {
+                    const li = document.createElement('li');
+        
+                    const textNode = document.createTextNode(taskText);
+                    li.appendChild(textNode);
 
-                const taskList = document.getElementById('taskList');
-                taskList.appendChild(li);
+                    const lixeira = document.createElement('img');
+                    lixeira.src = 'imagens/lixeira.png';
+                    lixeira.alt = 'lixeira';
+        
+                lixeira.addEventListener('click', () => {
+                    li.remove();
+        });
 
-                taskInput.value = '';
-            }
-        };
+            li.appendChild(lixeira);
 
+        const taskList = document.getElementById('taskList');
+        taskList.appendChild(li);
+        taskInput.value = '';
+    }
+}
         const modal = document.getElementById("nossoModal");
         const fecharModal = document.getElementById("fecharModal");
 
