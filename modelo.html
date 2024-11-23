@@ -18,7 +18,7 @@
             font-size: 1.875rem;
         }
 
-        h1{
+        h1 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -117,7 +117,7 @@
 
         .modal-content {
             background: #ffffff;
-            padding: 20px;
+            padding: 150px;
             border-radius: 8px;
             text-align: center;
             max-width: 500px;
@@ -130,17 +130,30 @@
         }
 
         .fechar-modal {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 2rem;
             cursor: pointer;
-            font-size: 1.5rem;
             color: #000;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            right: 20px;
+        }
+
+        .fechar-modal img {
+            width: 40px;
+            height: 40px;
         }
 
         .dark-mode .fechar-modal {
             color: #ffffff;
         }
+
+        .dark-mode .fechar-modal img {
+            filter: invert(1);
+        }
+
     </style>
 </head>
 <body>
@@ -157,10 +170,11 @@
         </div>
     </div>
 
-    <!-- Modal -->
     <div class="modal" id="nossoModal">
         <div class="modal-content">
-            <span class="fechar-modal" id="fecharModal">&times;</span>
+            <span class="fechar-modal" id="fecharModal">
+                <img src="imagens/x.png" alt="Fechar">
+            </span>
             <h2>oii isa</h2>
             <p>Para entrar em contato, clique no link abaixo:</p>
             <a href="https://wa.me/5541996386250" target="_blank">
@@ -206,11 +220,7 @@
             modal.style.display = "none";
         });
 
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        });
+        // Removido o evento de clique no fundo do modal
     </script>
 </body>
 </html>
