@@ -9,10 +9,10 @@
 <ul align="baseline">
   <li><strong>CRUD Completo</strong>
     <ul align="baseline">
-      <li>🔹 <strong>Criar:</strong> Adicionar novas tarefas.</li>
-      <li>🔹 <strong>Ler:</strong> Visualizar todas as tarefas.</li>
-      <li>🔹 <strong>Atualizar:</strong> Editar tarefas existentes.</li>
-      <li>🔹 <strong>Deletar:</strong> Excluir tarefas indesejadas.</li>
+      <li><strong>Criar:</strong> Adicionar novas tarefas.</li>
+      <li><strong>Ler:</strong> Visualizar todas as tarefas.</li>
+      <li><strong>Atualizar:</strong> Editar tarefas existentes.</li>
+      <li><strong>Deletar:</strong> Excluir tarefas indesejadas.</li>
     </ul>
   </li>
   <li><strong>Modo Claro/Escuro</strong> - 🌗 Interface personalizável para o usuário.</li>
@@ -20,6 +20,7 @@
   <li><strong>Interface Responsiva</strong> - 📱 Criamos uma interface adaptável para dispositivos móveis e desktop, utilizando técnicas de CSS como flexbox e media queries.</li>
   <li><strong>Uso de Arrays e Objetos</strong> - Utilizamos arrays e objetos para manipulação eficiente de dados e tarefas no sistema.</li>
 </ul>
+
 
 <h3 align="baseline">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
