@@ -101,7 +101,36 @@
         body.dark-mode button i {
             color: #000000;
         }
-
+        ul{
+            display: flex;
+            color: black;
+            font-family: "Tinos", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.125rem;
+            gap: 5px;
+            border: none;
+            flex-direction: column;
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            width: 100%;
+            max-width: 23rem;
+            align-items: center;
+            justify-content: center;
+        }
+        li {
+            border: solid 1px black;
+            background-color: white;
+            margin: 5px 0;
+            list-style-type: none;
+            width: 23rem;
+            border-radius: 4px;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .modal {
             display: none;
             position: fixed;
@@ -163,13 +192,17 @@
     <div class="container">
         <h1>Lista de Tarefas</h1>
         <div class="adicionar">
-            <input type="text" placeholder="Adicionar tarefa">
-            <button class="mais">
+            <input type="text" id="taskInput" placeholder="Adicionar tarefa">
+            <button class="mais" onclick="addTask()">
                 <img src="imagens/mais.png" alt="Adicionar">
             </button>
         </div>
         <div class="theme-toggle" id="toggle-theme">
             <i class="fas fa-moon"></i>
+        </div>
+        <div>
+            <ul id="taskList">
+            </ul>
         </div>
     </div>
 
@@ -190,6 +223,7 @@
     </div>
 
     <script>
+        //temas
         const botaoTema = document.getElementById("toggle-theme");
 
         botaoTema.addEventListener("click", () => {
@@ -208,6 +242,24 @@
                 document.querySelector("#toggle-theme i").className = "fas fa-sun";
             }
         });
+          // adcionando tarefas
+          function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                // Criar um novo item da lista
+                const li = document.createElement('li');
+                li.textContent = taskText;
+
+                // Adicionar o item à lista
+                const taskList = document.getElementById('taskList');
+                taskList.appendChild(li);
+
+                // Limpar o campo de entrada
+                taskInput.value = '';
+            }};
+
 
         const modal = document.getElementById("nossoModal");
         const fecharModal = document.getElementById("fecharModal");
