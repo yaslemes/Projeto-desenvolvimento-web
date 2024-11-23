@@ -28,6 +28,27 @@
 
 <p align="baseline">👩‍💻 Yasmym Lemes & Isabely Turquino</p>
 
+<h3 align="left">Connect with us!</h3>
+<div>
+  <!-- E-mail for Yasmym Lemes -->
+  <a href="mailto:ylemes@alunos.utfpr.edu.br">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Yasmym Lemes Gmail">
+  </a>
+  <!-- WhatsApp for Yasmym Lemes -->
+  <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
+    <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Yasmym Lemes WhatsApp">
+  </a>
+
+  <!-- E-mail for Isabely Turquino -->
+  <a href="mailto:isabely@alunos.utfpr.edu.br">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Isabely Turquino Gmail">
+  </a>
+  <!-- WhatsApp for Isabely Turquino -->
+  <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
+    <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Isabely Turquino WhatsApp">
+  </a>
+</div>
+
 <h3 align="baseline">Linguagens Utilizadas</h3>
 
 <h2 align="baseline">
@@ -38,7 +59,8 @@
         <img src="https://skillicons.dev/icons?i=javascript,html,css" alt="Skills">
       </a>
     </div>
-
+  </div>
+</h2>
 
 <div align="baseline">
   <p>📚 Este projeto visa aprimorar as habilidades em desenvolvimento web e interação com a interface.</p>
