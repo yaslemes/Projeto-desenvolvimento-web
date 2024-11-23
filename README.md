@@ -54,7 +54,7 @@
 
 <h3 align="baseline">Linguagens Utilizadas</h3>
 
-<h2 align="baseline">
+<h2 align="center">
   <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
     <!-- Linguagens -->
     <div>
