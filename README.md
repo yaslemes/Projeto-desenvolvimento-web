@@ -30,7 +30,7 @@
    🧑‍💻 Autoras
 </h3>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: flex; justify-content: space-evely; align-items: center; gap: 10px;">
   <div style="text-align: center;">
     <p><strong>Yasmym Lemes</strong></p>
     <a href="mailto:ylemes@alunos.utfpr.edu.br">
