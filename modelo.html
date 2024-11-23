@@ -241,6 +241,10 @@
         });
 
         window.addEventListener("load", () => {
+            // Garante que o modal começa oculto assim que a página carregar
+            const modal = document.getElementById("nossoModal");
+            modal.style.display = "none";
+
             const temaSalvo = localStorage.getItem("tema");
             if (temaSalvo === "escuro") {
                 document.body.classList.add("dark-mode");
