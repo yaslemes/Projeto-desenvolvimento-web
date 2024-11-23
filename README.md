@@ -43,7 +43,7 @@
 
   <div style="text-align: center;">
     <p><strong>Isabely Turquino</strong></p>
-    <a href="mailto:isabely@alunos.utfpr.edu.br">
+    <a href="mailto:isabelyturquino@alunos.utfpr.edu.br">
       <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Isabely Turquino Gmail">
     </a>
     <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
