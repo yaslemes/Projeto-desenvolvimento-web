@@ -29,6 +29,7 @@
 <p align="baseline">👩‍💻 Yasmym Lemes & Isabely Turquino</p>
 
 <h3 align="left">Connect with us!</h3>
+<a>Yasmym Lemes</a>  <a>Isabely Turquino</a>
 <div>
   <!-- E-mail for Yasmym Lemes -->
   <a href="mailto:ylemes@alunos.utfpr.edu.br">
