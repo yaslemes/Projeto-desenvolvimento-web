@@ -36,7 +36,7 @@
     <a href="mailto:ylemes@alunos.utfpr.edu.br">
       <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Yasmym Lemes Gmail">
     </a>
-    <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
+    <a href="https://wa.me/5541996386250 target="_blank">
       <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Yasmym Lemes WhatsApp">
     </a>
   </div>
