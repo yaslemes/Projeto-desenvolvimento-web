@@ -29,18 +29,16 @@
 <p align="baseline">👩‍💻 Yasmym Lemes & Isabely Turquino</p>
 
 <h3 align="baseline">Linguagens Utilizadas</h3>
+
 <h2 align="baseline">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=javascript,html,css" alt="Skills">
-  </a>
-  <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+    <!-- Linguagens -->
     <div>
-      <a href="https://github.com/Yaslemes/github-readme-stats">
-        <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=Yaslemes&line_height=10&card_width=290&layout=compact&hide_title=false&count_private=true&langs_count=4&show_icons=true&title_color=FF00F6&hide=html,scss,less&bg_color=000&text_color=8B8B8B&border_radius=3&border_color=561760&count_private=true" alt="Most Used Languages">
+      <a href="https://skillicons.dev">
+        <img src="https://skillicons.dev/icons?i=javascript,html,css" alt="Skills">
       </a>
     </div>
-  </div>
-</h2>
+
 
 <div align="baseline">
   <p>📚 Este projeto visa aprimorar as habilidades em desenvolvimento web e interação com a interface.</p>
