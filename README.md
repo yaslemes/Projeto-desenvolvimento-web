@@ -16,6 +16,9 @@
     </ul>
   </li>
   <li><strong>Modo Claro/Escuro</strong> - 🌗 Interface personalizável para o usuário.</li>
+  <li><strong>Detecção de Eventos de Teclado (JS)</strong> - ⌨ Implementação de eventos como "keydown" para interação com a interface.</li>
+  <li><strong>Interface Responsiva</strong> - 📱 Criamos uma interface adaptável para dispositivos móveis e desktop, utilizando técnicas de CSS como flexbox e media queries.</li>
+  <li><strong>Uso de Arrays e Objetos</strong> - Utilizamos arrays e objetos para manipulação eficiente de dados e tarefas no sistema.</li>
 </ul>
 
 <h3 align="baseline">
@@ -23,31 +26,29 @@
     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
     <circle cx="12" cy="7" r="4"></circle>
   </svg>
-  Autoras
+   🧑‍💻 Autoras
 </h3>
 
-<p align="baseline">👩‍💻 Yasmym Lemes & Isabely Turquino</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="text-align: center;">
+    <p><strong>Yasmym Lemes</strong></p>
+    <a href="mailto:ylemes@alunos.utfpr.edu.br">
+      <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Yasmym Lemes Gmail">
+    </a>
+    <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
+      <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Yasmym Lemes WhatsApp">
+    </a>
+  </div>
 
-<h3 align="left">Connect with us!</h3>
-<a>Yasmym Lemes</a>  <a>Isabely Turquino</a>
-<div>
-  <!-- E-mail for Yasmym Lemes -->
-  <a href="mailto:ylemes@alunos.utfpr.edu.br">
-    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Yasmym Lemes Gmail">
-  </a>
-  <!-- WhatsApp for Yasmym Lemes -->
-  <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
-    <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Yasmym Lemes WhatsApp">
-  </a>
-
-  <!-- E-mail for Isabely Turquino -->
-  <a href="mailto:isabely@alunos.utfpr.edu.br">
-    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Isabely Turquino Gmail">
-  </a>
-  <!-- WhatsApp for Isabely Turquino -->
-  <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
-    <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Isabely Turquino WhatsApp">
-  </a>
+  <div style="text-align: center;">
+    <p><strong>Isabely Turquino</strong></p>
+    <a href="mailto:isabely@alunos.utfpr.edu.br">
+      <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Isabely Turquino Gmail">
+    </a>
+    <a href="https://wa.me/55xxxxxxxxxx" target="_blank">
+      <img src="https://img.shields.io/badge/-WhatsApp-%234CBB87?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Isabely Turquino WhatsApp">
+    </a>
+  </div>
 </div>
 
 <h3 align="baseline">Linguagens Utilizadas</h3>
