@@ -1,11 +1,12 @@
 <p align="baseline">Olá! Somos estudantes e estamos cursando o Técnico em Informática para Internet 
   da UTFPR de Campo Mourão.</p>
 
-<img align="baseline" alt="Study GIF" height="190px" src="./src/study.gif">
+
+<p align="baseline">Este projeto foi desenvolvido como parte da disciplina <strong>Desenvolvimento Web 1</strong>, ministrada pelo professor Rafael Liberato, no curso Técnico em Informática para Internet da UTFPR - Campo Mourão.</p>
 
 <h2 align="baseline">Lista de Tarefas</h2>
 
-<p align="baseline">Este projeto foi desenvolvido como parte da disciplina <strong>Desenvolvimento Web 1</strong>, ministrada pelo professor Rafael Liberato, no curso Técnico em Informática para Internet da UTFPR - Campo Mourão.</p>
+
 
 <p align="baseline"><strong>Funcionalidades:</strong></p>
 <ul align="baseline">
