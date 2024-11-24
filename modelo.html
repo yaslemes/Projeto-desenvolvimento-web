@@ -12,10 +12,10 @@
     <div class="container">
         <h1>Lista de Tarefas</h1>
         <div class="adicionar">
+            
             <input type="text" id="taskInput" placeholder="Adicionar tarefa">
-            <button class="mais" onclick="addTask()" title="Adicionar">
+            <button class="mais" onclick="addTask()" title="Adicionar tarefa">
                 <img src="imagens/mais.png" alt="Adicionar">
-            </button>
         </div>
         <div class="theme-toggle" id="toggle-theme">
             <i class="fas fa-moon"></i>
@@ -23,8 +23,16 @@
         <div>
             <ul id="taskList"></ul>
         </div>
+        
+        <!-- Barra de progresso -->
+        <div class="progress-container">
+            <progress id="progressBar" value="0" max="100"></progress>
+            <div id="progressLabel" class="progress-label">0/0</div> 
+            <div id="progressPercentage" class="progress-percentage">0%</div><!-- Texto da fração -->
+        </div>
     </div>
 
+    <!-- Modal de informações -->
     <div class="modal-container" id="nossoModal">
         <div class="modal-content">
             <span class="fechar-modal" id="fecharModal">
@@ -40,6 +48,7 @@
             </a>
         </div>
     </div>
+
 <script src="script.js"></script>
 </body>
 </html>

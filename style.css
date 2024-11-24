@@ -1,4 +1,4 @@
-   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corinthia:wght@400;700&family=Fira+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corinthia:wght@400;700&family=Fira+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     margin: 0;
@@ -297,4 +297,73 @@ li img {
 
 
 
+
+
+
+
+
+.progress-container {
+    position: relative;
+    height: 30px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+progress {
+    width: 315px;
+    height: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffffef;
+    border-radius: 5px;
+    display: flex;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #000000bb;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#progressLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.progress-percentage {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 50px; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;  
+}
+
+body.dark-mode .progress-percentage {
+    color: #ffffff;
+} 
+
+body.dark-mode .progress-percentage {
+    color: #ffffff;
+}
 
