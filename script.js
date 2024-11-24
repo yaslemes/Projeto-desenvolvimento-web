@@ -62,7 +62,7 @@ function addTask() {
                 textNode.contentEditable = "true";
                 textNode.focus(); 
                 editar.src = 'imagens/salvar.png';
-                editar.title = 'Salvar'
+                editar.title = 'Salvar edição'
             }
         });
 
