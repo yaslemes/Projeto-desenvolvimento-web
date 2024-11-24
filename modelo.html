@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -132,21 +132,30 @@ function addTask() {
         taskInput.value = '';
     }
 }
-
 // Modal de informações
 const modal = document.getElementById("nossoModal");
 const fecharModal = document.getElementById("fecharModal");
 
+// Garantir que o modal esteja escondido ao carregar a página
+window.addEventListener("load", () => {
+    modal.style.display = "none";  // Garante que o modal esteja escondido na inicialização
+});
+
+// Evento para abrir o modal ao pressionar Ctrl + H
 document.addEventListener("keydown", (event) => {
+    // Verifica se Ctrl + H foi pressionado
     if (event.ctrlKey && event.key === "h") {
         event.preventDefault();
-        modal.style.display = "flex";
+        modal.style.display = "flex";  // Exibe o modal quando Ctrl + H é pressionado
     }
 });
 
+// Fechar o modal quando o ícone de fechar for clicado
 fecharModal.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.style.display = "none";  // Esconde o modal quando o botão de fechar é pressionado
 });
+
+
 
 
     </script>
