@@ -99,11 +99,18 @@ function addTask() {
         editar.alt = 'Editar';
         editar.title = 'Editar tarefa';
         editar.addEventListener('click', () => {
-            const novoTexto = prompt("Edite sua tarefa:", taskText);
-            if (novoTexto) {
-                textNode.textContent = novoTexto.trim();
+            if (textNode.isContentEditable) {
+                textNode.contentEditable = "false";
+                editar.src = 'imagens/lapis.png';
+            } else {
+                textNode.contentEditable = "true";
+                textNode.focus(); 
+                editar.src = 'imagens/salvar.png';
             }
         });
+
+        
+        
 
         // Ícone de exclusão
         const lixeira = document.createElement('img');
