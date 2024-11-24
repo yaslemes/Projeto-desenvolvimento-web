@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -41,79 +42,116 @@
     </div>
 
     <script>
-        // mudança de tema
-        const botaoTema = document.getElementById("toggle-theme");
+        // Mudança de tema
+const botaoTema = document.getElementById("toggle-theme");
 
-        botaoTema.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            const temaEscuro = document.body.classList.contains("dark-mode");
-            localStorage.setItem("tema", temaEscuro ? "escuro" : "claro");
+botaoTema.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const temaEscuro = document.body.classList.contains("dark-mode");
 
-            const icone = document.querySelector("#toggle-theme i");
-            icone.className = temaEscuro ? "fas fa-sun" : "fas fa-moon";
-        });
+    localStorage.setItem("tema", temaEscuro ? "escuro" : "claro");
 
-        window.addEventListener("load", () => {
-            const modal = document.getElementById("nossoModal");
-            modal.style.display = "none";
+    const icone = document.querySelector("#toggle-theme i");
+    icone.className = temaEscuro ? "fas fa-sun" : "fas fa-moon";
+});
 
-            const temaSalvo = localStorage.getItem("tema");
-            if (temaSalvo === "escuro") {
-                document.body.classList.add("dark-mode");
-                document.querySelector("#toggle-theme i").className = "fas fa-sun";
+window.addEventListener("load", () => {
+    const modal = document.getElementById("nossoModal");
+    modal.style.display = "none";
+
+    const temaSalvo = localStorage.getItem("tema");
+    if (temaSalvo === "escuro") {
+        document.body.classList.add("dark-mode");
+        document.querySelector("#toggle-theme i").className = "fas fa-sun";
+    }
+});
+
+// Função para adicionar tarefa
+function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+
+    if (taskText !== '') {
+        const li = document.createElement('li');
+        
+        // Criação do círculo de tarefa concluída
+        const circle = document.createElement('div');
+        circle.classList.add('circle');
+        circle.addEventListener('click', () => {
+            li.classList.toggle('concluida');
+            // Alteração do estado do círculo
+            if (li.classList.contains('concluida')) {
+                circle.style.backgroundImage = 'url("imagens/concluido.png")'; // Ícone de concluído
+                circle.style.backgroundSize = 'cover';
+            } else {
+                circle.style.backgroundImage = ''; 
             }
         });
-        // função de adicionar e deletar as tarefas (lixeira) 
-        function addTask() {
-            const taskInput = document.getElementById('taskInput');
-            const taskText = taskInput.value.trim();
 
-                if (taskText !== '') {
-                    const li = document.createElement('li');
-        
-                    const textNode = document.createTextNode(taskText);
-                    li.appendChild(textNode);
+        // Texto da tarefa
+        const textNode = document.createElement('span');
+        textNode.textContent = taskText;
+        textNode.style.flex = "1"; 
 
-                    const lixeira = document.createElement('img');
-                    lixeira.src = 'imagens/lixeira.png';
-                    lixeira.alt = 'lixeira';
-
-                    // adiciona o editar
-                    const editar = document.createElement('img');
-                    editar.src = 'imagens/lapis.png';
-                    editar.alt = 'lapis';
-        
-                lixeira.addEventListener('click', () => {
-                    li.remove();
+        // Ícone de edição
+        const editar = document.createElement('img');
+        editar.src = 'imagens/lapis.png';
+        editar.alt = 'Editar';
+        editar.title = 'Editar tarefa';
+        editar.addEventListener('click', () => {
+            const novoTexto = prompt("Edite sua tarefa:", taskText);
+            if (novoTexto) {
+                textNode.textContent = novoTexto.trim();
+            }
         });
 
-            li.appendChild(lixeira);
-            li.appendChild(editar)
-            const iconesContainer = document.createElement('div');
-            iconesContainer.appendChild(editar);
-            iconesContainer.appendChild(lixeira);
-            li.appendChild(iconesContainer);
+        // Ícone de exclusão
+        const lixeira = document.createElement('img');
+        lixeira.src = 'imagens/lixeira.png';
+        lixeira.alt = 'Excluir';
+        lixeira.title = 'Excluir tarefa';
+        lixeira.addEventListener('click', () => {
+            li.remove();
+        });
 
+        // Contêiner para os ícones
+        const iconsContainer = document.createElement('div');
+        iconsContainer.classList.add('icons');
+        iconsContainer.appendChild(editar);
+        iconsContainer.appendChild(lixeira);
+
+        // Montando a estrutura do item da lista
+        li.appendChild(circle);
+        li.appendChild(textNode);
+        li.appendChild(iconsContainer);
 
         const taskList = document.getElementById('taskList');
         taskList.appendChild(li);
+
+        // Limpa o campo de entrada
         taskInput.value = '';
-            }
-        }
-        // criação e utilização do modal
-        const modal = document.getElementById("nossoModal");
-        const fecharModal = document.getElementById("fecharModal");
+    }
+}
 
-        document.addEventListener("keydown", (event) => {
-            if (event.ctrlKey && event.key === "h") {
-                event.preventDefault();
-                modal.style.display = "flex";
-            }
-        });
+// Modal de informações
+const modal = document.getElementById("nossoModal");
+const fecharModal = document.getElementById("fecharModal");
 
-        fecharModal.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
+document.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && event.key === "h") {
+        event.preventDefault();
+        modal.style.display = "flex";
+    }
+});
+
+fecharModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+
     </script>
+
+
+    
 </body>
 </html>
