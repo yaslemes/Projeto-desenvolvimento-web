@@ -22,20 +22,26 @@ window.addEventListener("load", () => {
     }
 });
 
-// Função para atualizar a barra de progresso
+// Função para atualizar a barra de progresso e o emoji
 function updateProgress() {
     const totalTasks = document.querySelectorAll('#taskList li').length;
     const completedTasks = document.querySelectorAll('#taskList li.concluida').length;
 
-    // Atualizando a barra de progresso
     const progressBar = document.getElementById('progressBar');
     const progressLabel = document.getElementById('progressLabel');
-    
+    const progressPercentage = document.getElementById('progressPercentage');
+
     const progress = totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0;
     progressBar.value = progress;
 
-   
-progressLabel.textContent =` ${completedTasks}/${totalTasks}`
+    progressLabel.textContent = `${completedTasks}/${totalTasks}`;
+
+  
+    if (completedTasks === totalTasks && totalTasks > 0) {
+        progressPercentage.textContent = "✅";  
+    } else {
+        progressPercentage.textContent = "";  
+    }
 }
 
 // Função para adicionar tarefa
@@ -51,14 +57,14 @@ function addTask() {
         circle.classList.add('circle');
         circle.addEventListener('click', function() {
             li.classList.toggle('concluida');
-            // Alteração do estado do círculo
+           
             if (li.classList.contains('concluida')) {
-                circle.style.backgroundImage = 'url("imagens/concluidodark.png")'; // Ícone de concluído
+                circle.style.backgroundImage = 'url("imagens/concluidodark.png")';
                 circle.style.backgroundSize = 'cover';
             } else {
-                circle.style.backgroundImage = ''; // Retira o ícone quando não concluído
+                circle.style.backgroundImage = ''; 
             }
-            updateProgress();  // Atualiza as estatísticas e a barra de progresso
+            updateProgress();  
         });
 
         // Texto da tarefa
@@ -68,20 +74,20 @@ function addTask() {
 
         // Ícone de edição
         const editar = document.createElement('img');
-editar.src = 'imagens/lapis.png';
-editar.alt = 'Editar';
-editar.title = 'Editar tarefa';
-editar.addEventListener('click', () => {
-    if (textNode.isContentEditable) {
-        textNode.contentEditable = "false";
         editar.src = 'imagens/lapis.png';
-    } else {
-        textNode.contentEditable = "true";
-        textNode.focus(); 
-        editar.src = 'imagens/salvar.png';
-        editar.title = 'Salvar'
-        editar.title = 'Salvar edição'
-    }
+        editar.alt = 'Editar';
+        editar.title = 'Editar tarefa';
+        editar.addEventListener('click', () => {
+            if (textNode.isContentEditable) {
+                textNode.contentEditable = "false";
+                editar.src = 'imagens/lapis.png';
+            } else {
+                textNode.contentEditable = "true";
+                textNode.focus(); 
+                editar.src = 'imagens/salvar.png';
+                editar.title = 'Salvar'
+                editar.title = 'Salvar edição'
+            }
         });
 
         // Ícone de exclusão
@@ -91,16 +97,16 @@ editar.addEventListener('click', () => {
         lixeira.title = 'Excluir tarefa';
         lixeira.addEventListener('click', function() {
             li.remove();
-            updateProgress(); 
+            updateProgress();  
         });
 
-        // Contêiner para os ícones
+        
         const iconsContainer = document.createElement('div');
         iconsContainer.classList.add('icons');
         iconsContainer.appendChild(editar);
         iconsContainer.appendChild(lixeira);
 
-        // Montando a estrutura do item da lista
+        
         li.appendChild(circle);
         li.appendChild(textNode);
         li.appendChild(iconsContainer);
@@ -108,31 +114,22 @@ editar.addEventListener('click', () => {
         const taskList = document.getElementById('taskList');
         taskList.appendChild(li);
 
-        // Limpa o campo de entrada
+        
         taskInput.value = '';
 
         updateProgress();  
     }
 }
 
-function updateProgress() {
-const totalTasks = document.querySelectorAll('#taskList li').length;
-const completedTasks = document.querySelectorAll('#taskList li.concluida').length;
 
-const progressBar = document.getElementById('progressBar');
-const progressLabel = document.getElementById('progressLabel');
-const progressPercentage = document.getElementById('progressPercentage');
-
-const progress = totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0;
-progressBar.value = progress;
-
-progressLabel.textContent = `${completedTasks}/${totalTasks}`;
-progressPercentage.textContent = `${Math.round(progress)}%`;
-
-if (completedTasks === totalTasks && totalTasks > 0) {
-progressPercentage.textContent = "✅";
-    }
-}
+window.addEventListener("load", () => {
+    const temaSalvo = localStorage.getItem("tema");
+    if (temaSalvo === "escuro") {
+        document.body.classList.add("dark-mode");
+        document.querySelector("#toggle-theme i").className = "fas fa-sun";
+    }
+    updateProgress();  
+});
 
 // Modal de informações
 const modal = document.getElementById("nossoModal");

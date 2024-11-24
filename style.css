@@ -296,12 +296,6 @@ li img {
 }
 
 
-
-
-
-
-
-
 .progress-container {
     position: relative;
     height: 30px;
@@ -312,17 +306,17 @@ li img {
 }
 
 progress {
-    width: 315px;
+    width: 319px;
     height: 30px;
     appearance: none;
     -webkit-appearance: none;
-    background-color: #ffffffef;
+    background-color: #e2dbdbef;
     border-radius: 5px;
     display: flex;
 }
 
 progress::-webkit-progress-bar {
-    background-color: #000000bb;
+    background-color: #c9c5c5e2;
     border-radius: 5px;
 }
 
