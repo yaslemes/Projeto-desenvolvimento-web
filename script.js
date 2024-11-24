@@ -27,7 +27,6 @@ window.addEventListener("load", () => {
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
-
     if (taskText !== '') {
         const li = document.createElement('li');
         
@@ -63,6 +62,7 @@ function addTask() {
                 textNode.contentEditable = "true";
                 textNode.focus(); 
                 editar.src = 'imagens/salvar.png';
+                editar.title = 'Salvar'
             }
         });
 
