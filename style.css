@@ -334,7 +334,7 @@ progress::-webkit-progress-value {
 #progressLabel {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 160px;
     transform: translate(-50%, -50%);
     font-size: 15px;
     color: rgb(0, 0, 0);
