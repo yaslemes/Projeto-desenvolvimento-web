@@ -143,7 +143,7 @@ window.addEventListener("load", () => {
 
 document.addEventListener("keydown", (event) => {
     
-    if (event.ctrlKey && event.key === "x") {
+    if (event.ctrlKey && event.key === "h") {
         event.preventDefault();
         modal.style.display = "flex";  
     }
