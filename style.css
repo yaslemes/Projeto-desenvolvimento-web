@@ -184,7 +184,7 @@ li img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 40%;
     max-width: 1350px;
     height: auto;
     z-index: 1000;
@@ -225,7 +225,7 @@ li img {
 }
 
 .fechar-modal img {
-    padding: 15px;
+    padding: 20px;
     width: 20px;
     height: 20px;
 }
@@ -236,6 +236,35 @@ li img {
 
 .dark-mode .fechar-modal img {
     filter: invert(1);
+}
+.informacoesModal{
+    display: flex;
+    flex-direction: row;
+    gap: 8px; 
+    align-items: center;
+    margin: 10px 30px;
+    padding: 20px;
+}
+.informacoesModal p {
+    margin: .9375rem;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-align: center; 
+}
+.informacoesModal img{
+    height: 40px;
+    margin-top: 20px;
+}
+#autoras{
+    display: flex;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
