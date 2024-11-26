@@ -38,7 +38,7 @@ function updateProgress() {
 
   
     if (completedTasks === totalTasks && totalTasks > 0) {
-        progressPercentage.textContent = "✅";  
+        progressPercentage.textContent = "✔";  
     } else {
         progressPercentage.textContent = "";  
     }
