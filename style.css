@@ -202,7 +202,7 @@ li img {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    height: 650px;
+    height: 500px;
     border: 2px solid #000000;
 }
 
@@ -299,7 +299,7 @@ li img {
     }
 
     .modal-content {
-        height: 500px;
+        height: 00px;
     }
 }
 
