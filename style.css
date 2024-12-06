@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corinthia:wght@400;700&family=Fira+Sans&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
- 
+
+:root {
+    --fontePrincipal: "Corinthia", cursive;
+    --fonteSecundaria: "Arial", Helvetica, sans-serif;
+    --bordaPadrao: 2px solid black; 
+
+}
 /* ---------------------------------- DEFINE O ESTILO BASE DO CORPO DA PÁGINA ---------------------------------- */
 body {
     margin: 0;
-    font-family: "Corinthia", cursive;
+    font-family: var(--fontePrincipal);
     color: #000000;
     background-image: url('imagens/white.png');
     background-size: cover;
@@ -88,7 +94,7 @@ button.mais {
     padding: 10px 15px;
     font-size: min(1rem, 3vw);
     color: #080707;
-    border: solid black 1px;
+    border: var(--bordaPadrao);
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -116,7 +122,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px black;
+    border: var(--bordaPadrao);
     background-color: white;
     margin-top: 10px;
     padding: 10px;
@@ -124,7 +130,7 @@ li {
     width: 100%;
     box-sizing: border-box;
     word-break: break-word;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonteSecundaria);
     font-size: min(15px, 3vw);
     gap: 10px;
 }
@@ -139,7 +145,7 @@ li .circle {
     align-items: center;
     width: min(15px, 3vw);
     height: min(15px, 3vw);
-    border: 2px solid black;
+    border: var(--bordaPadrao);
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
@@ -248,7 +254,7 @@ body li.concluida {
 .informacoesModal p {
     margin: 0;
     font-size: min(20px, 4vw);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonteSecundaria);
     font-weight: 300;
 }
 
@@ -313,7 +319,7 @@ progress::-webkit-progress-value {
     transform: translateX(-50%) translateY(-50%);
     font-size: min(15px, 4vw);
     color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonteSecundaria);
 }
 
 
