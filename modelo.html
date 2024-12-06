@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <div class="container">
+        <!-- Botão para alternar o tema -->
         <div class="theme-toggle" id="toggle-theme">
             <i class="fas fa-moon"></i>
         </div>
-        <div>
-            <h1>Lista de Tarefas</h1>
-            <div class="adicionar">
-                
-                <input type="text" id="taskInput" placeholder="Adicionar tarefa">
-                <button class="mais" onclick="addTask()" title="Adicionar tarefa">
-                    <img src="imagens/mais.png" alt="Adicionar">
-            </div>
-            <div>
-                <ul id="taskList"></ul>
-            </div>
+
+        <!-- Título e área para adicionar tarefas -->
+        <h1>Lista de Tarefas</h1>
+        <div class="adicionar">
+            <input type="text" id="taskInput" placeholder="Adicionar tarefa">
+            <button class="mais" onclick="addTask()" title="Adicionar tarefa">
+                <img src="imagens/mais.png" alt="Adicionar">
+            </button>
         </div>
-        
-        
+
+        <!-- Lista de tarefas -->
+        <ul id="taskList"></ul>
+
+        <!-- Barra de progresso -->
         <div class="progress-container">
             <progress id="progressBar" value="0" max="100"></progress>
-            <div id="progressLabel" class="progress-label">0/0</div> 
+            <div id="progressLabel" class="progress-label">0/0</div>
             <div id="progressPercentage" class="progress-percentage"></div>
         </div>
     </div>
 
- 
+    <!-- Modal com informações sobre as autoras -->
     <div class="modal-container" id="nossoModal">
         <div class="modal-content">
             <span class="fechar-modal" id="fecharModal">
@@ -44,25 +44,24 @@
             <p>Informações sobre as autoras:</p>
             <div>
                 <div class="informacoesModal">
-                    <img id="autoras" src="imagens/yasmym.png" alt="yasmym">
+                    <img src="imagens/yasmym.png" alt="Yasmym">
                     <p>Yasmym</p>
-                    <p>(41)9963-86250</p>
                     <a href="https://wa.me/5541996386250" target="_blank">
-                            <img src="imagens/whatsapp.png" alt="WhatsApp">
+                        <img src="imagens/whatsapp.png" alt="WhatsApp">
                     </a>
                 </div>
                 <div class="informacoesModal">
-                    <img id="autoras" src="imagens/isabely.jpg" alt="isabely">
+                    <img src="imagens/isabely.jpg" alt="Isabely">
                     <p>Isabely</p>
-                    <p>(44)99975-5563</p>
                     <a href="https://wa.me/5544999755563" target="_blank">
-                            <img src="imagens/whatsapp.png" alt="WhatsApp">
+                        <img src="imagens/whatsapp.png" alt="WhatsApp">
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
