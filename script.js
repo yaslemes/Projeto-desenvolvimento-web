@@ -173,4 +173,5 @@ taskInput.addEventListener("keydown", (event) => {
         event.preventDefault(); 
         addTask(); 
     }
-});
+})
+

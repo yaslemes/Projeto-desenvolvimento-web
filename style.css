@@ -11,18 +11,14 @@ body {
     margin: 0;
     font-family: var(--fontePrincipal);
     color: #000000;
-    background-image: url('imagens/white.png');
+    background-color: white;
     background-size: cover;
     font-weight: 700;
     font-size: min(1.875rem, 5vw);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: min(78px, 10vw);
-}
+
 
 
 /* ---------------------------------- CONTAINER PRINCIPAL QUE CENTRALIZA O CONTEÚDO ---------------------------------- */
@@ -53,7 +49,7 @@ h1 {
 /* ---------------------------------- PERSONALIZAÇÃO DO CONTEÚDO NO TEMA ESCURO ---------------------------------- */
 
 body.dark-mode {
-    background-image: url('imagens/dark.png');
+   background-color: #000;
     color: #ffffff;
 }
 
@@ -91,7 +87,8 @@ input {
 /* ---------------------------------- CONFG DO BOTÃO "ADICIONAR" ---------------------------------- */
 
 button.mais {
-    padding: 10px 15px;
+    padding: 10px 10px;
+    height: 40px;
     font-size: min(1rem, 3vw);
     color: #080707;
     border: var(--bordaPadrao);
@@ -100,11 +97,18 @@ button.mais {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease;
 }
+
+
 
 button.mais img {
     width: min(24px, 5vw);
     height: min(24px, 5vw);
+}
+
+button.mais:hover {
+    transform: scale(1.1); /* Aumenta o botão quando o mouse passa sobre ele */
 }
 
 /* ---------------------------------- LISTA DE ITENS ---------------------------------- */
@@ -133,11 +137,42 @@ li {
     font-family: var(--fonteSecundaria);
     font-size: min(15px, 3vw);
     gap: 10px;
+    animation: fadeIn 0.5s ease-out;
 }
 
-body.dark-mode li {
-    color: #000;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+
+body.dark-mode li {
+    color: #d5c7c7;
+    background-color: #080707;
+    border: 1px solid #333333;
+}
+
+body.dark-mode li .circle {
+    border-color: #ffffff; /* Borda branca para o círculo */
+}
+
+body.dark-mode li.concluida {
+    color: #777777; /* Cor mais clara para as tarefas concluídas */
+    text-decoration: line-through;
+}
+
+/* ---------------------------------- TEMA ESCURO - ÍCONES DENTRO DA LI ---------------------------------- */
+body.dark-mode li .icons img {
+    filter: brightness(0) saturate(100%) invert(100%); /* Inverte a cor dos ícones dentro de <li> para brancos */
+}
+
+
 
 li .circle {
     display: flex;
@@ -173,6 +208,14 @@ body.dark-mode li.concluida {
     color: #5f5c5c;
     text-decoration: line-through;
 }
+body.dark-mode li .circle {
+    border-color: #ffffff; /* Borda branca para o círculo */
+    background-color: rgba(255, 255, 255, 0.2)}
+
+body.dark-mode li .circle img {
+    filter: brightness(0) saturate(100%) invert(100%);}
+
+
 
 body li.concluida {
     color: #888888;
@@ -203,6 +246,8 @@ body li.concluida {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    border: 2px solid #0b0b0b;
+   
 }
 
 .dark-mode .modal-content {
@@ -210,6 +255,8 @@ body li.concluida {
     color: #ffffff;
     border: 2px solid #ffffff;
 }
+
+
 
 /* ---------------------------------- FECHAR MODAL ---------------------------------- */
 
@@ -300,6 +347,15 @@ progress {
     background-color: #e2dbdbef;
     border-radius: 15px;
     display: flex;
+    animation: progressGrow 2s ease-out forwards;
+}
+@keyframes progressGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 progress::-webkit-progress-bar {
@@ -320,4 +376,5 @@ progress::-webkit-progress-value {
     font-size: min(15px, 4vw);
     color: rgb(0, 0, 0);
     font-family: var(--fonteSecundaria);
+
 }
