@@ -73,6 +73,8 @@ input {
     box-sizing: border-box;
 }
 
+/* ---------------------------------- CONFG DO BOTÃO "ADICIONAR" ---------------------------------- */
+
 button.mais {
     padding: 10px 15px;
     font-size: min(1rem, 3vw);
