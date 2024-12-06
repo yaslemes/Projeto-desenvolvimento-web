@@ -54,11 +54,24 @@ function updateProgress() {
     }
 }
 
+// Configura o evento para tecla Enter no campo de entrada
+const taskInput = document.getElementById('taskInput');
+taskInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault(); 
+        addTask(); 
+    }
+});
+// Configura o evento de clique no botão "Adicionar"
+const addButton = document.getElementById('addButton');
+addButton.addEventListener("click", () => {
+    addTask(); 
+});
+
 // Função para adicionar uma nova tarefa
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
-
     // Verifica se o texto da tarefa não está vazio
     if (taskText !== '') {
         const li = document.createElement('li');
