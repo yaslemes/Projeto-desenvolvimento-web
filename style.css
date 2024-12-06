@@ -51,6 +51,14 @@ body.dark-mode {
     color: #ffffff;
 }
 
+/* ---------------------------------- Area para responsividade ---------------------------------- */
+#area{
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
 /* ---------------------------------- ADICIONAR TAREFAS ---------------------------------- */
 
 .adicionar {
@@ -58,6 +66,7 @@ body.dark-mode {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 input {

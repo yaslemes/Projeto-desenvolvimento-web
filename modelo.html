@@ -13,24 +13,25 @@
         <div class="theme-toggle" id="toggle-theme">
             <i class="fas fa-moon"></i>
         </div>
-
-        <!-- Título e área para adicionar tarefas -->
-        <h1>Lista de Tarefas</h1>
-        <div class="adicionar">
-            <input type="text" id="taskInput" placeholder="Adicionar tarefa">
-            <button class="mais" onclick="addTask()" title="Adicionar tarefa">
-                <img src="imagens/mais.png" alt="Adicionar">
-            </button>
-        </div>
-
-        <!-- Lista de tarefas -->
-        <ul id="taskList"></ul>
-
-        <!-- Barra de progresso -->
-        <div class="progress-container">
-            <progress id="progressBar" value="0" max="100"></progress>
-            <div id="progressLabel" class="progress-label">0/0</div>
-            <div id="progressPercentage" class="progress-percentage"></div>
+        <div id="area">
+                <!-- Título e área para adicionar tarefas -->
+                <h1>Lista de Tarefas</h1>
+                <div class="adicionar">
+                    <input type="text" id="taskInput" placeholder="Adicionar tarefa">
+                    <button class="mais" onclick="addTask()" title="Adicionar tarefa">
+                        <img src="imagens/mais.png" alt="Adicionar">
+                    </button>
+                </div>
+            
+                <!-- Lista de tarefas -->
+                <ul id="taskList"></ul>
+            
+                <!-- Barra de progresso -->
+                <div class="progress-container">
+                    <progress id="progressBar" value="0" max="100"></progress>
+                    <div id="progressLabel" class="progress-label">0/0</div>
+                    <div id="progressPercentage" class="progress-percentage"></div>
+                </div>
         </div>
     </div>
 
