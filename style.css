@@ -4,22 +4,23 @@
     --fontePrincipal: "Poppins", sans-serif;
     --fonteSecundaria: "Arial", Helvetica, sans-serif;
     --bordaPadrao: 2px solid #042a36; 
+    --corPrimaria:#031b23;
+    --corSecundaria: #042a36;
 
 }
 /* ---------------------------------- DEFINE O ESTILO BASE DO CORPO DA PÁGINA ---------------------------------- */
 body {
     margin: 0;
     font-family: var(--fontePrincipal);
-    color: #042a36;
+    color: var(--corPrimaria);
     background-color: white;
-    background-size: cover;
     font-weight: 600;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 h1 {
-    font-weight: 600;
+    font-weight: 550;
     font-size: min(2.8125rem, 6vw); 
-    font-family: var(--fontePrincipal); 
+
 }
 
 
@@ -48,14 +49,14 @@ h1 {
     font-size: min(1.25rem, 3vw);
 }
 .theme-toggle .fa-moon {
-    color: #042a36; /* Define a cor azul */
+    color: var(--corSecundaria); 
 }
 
 
 /* ---------------------------------- PERSONALIZAÇÃO DO CONTEÚDO NO TEMA ESCURO ---------------------------------- */
 
 body.dark-mode {
-   background-color: #031b23;
+   background-color: var(--corPrimaria);
     color: #ffffff;
 }
 
@@ -83,7 +84,7 @@ input {
     font-size: min(1rem, 3vw);
     width: 540px;
     max-width: 600px;
-    background-color: #0b3143;
+    background-color: var(--corSecundaria);
     color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -113,7 +114,7 @@ button.mais img {
 }
 
 button.mais:hover {
-    transform: scale(1.1); /* Aumenta o botão quando o mouse passa sobre ele */
+    transform: scale(1.1); 
 }
 
 /* ---------------------------------- LISTA DE ITENS ---------------------------------- */
@@ -128,6 +129,7 @@ ul {
 }
 
 li {
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,7 +166,7 @@ body.dark-mode li {
 }
 
 body.dark-mode li .circle {
-    border-color:black ; /* Borda branca para o círculo */
+    border-color:black ; 
 }
 
 body.dark-mode li.concluida {
@@ -174,7 +176,7 @@ body.dark-mode li.concluida {
 
 /* ---------------------------------- TEMA ESCURO - ÍCONES DENTRO DA LI ---------------------------------- */
 body.dark-mode li .icons img {
-    filter:none; /* Inverte a cor dos ícones dentro de <li> para brancos */
+    filter:none; 
 }
 
 li .circle {
@@ -240,7 +242,7 @@ body li.concluida {
 }
 
 .modal-content {
-    background: #ffffff;
+    background-color: #b8cddb;
     color: #000000;
     padding: 20px;
     border-radius: 8px;
@@ -248,12 +250,12 @@ body li.concluida {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border: 2px solid #0b0b0b;
+    border: var(--bordaPadrao);
    
 }
 
 .dark-mode .modal-content {
-    background: #333333;
+    background: #082735;
     color: #ffffff;
     border: 2px solid #ffffff;
 }
@@ -268,7 +270,7 @@ body li.concluida {
     align-items: center;
     font-size: min(2rem, 6vw);
     cursor: pointer;
-    color: #000;
+    color: var(--corSecundaria);
     position: absolute;
     top: 10px;
     right: 10px;
@@ -315,7 +317,7 @@ body li.concluida {
 
 .informacoesModal .info-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
@@ -323,7 +325,6 @@ body li.concluida {
 #autoras {
     height: min(50px, 15vw);
     width: min(50px, 15vw);
-    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -346,7 +347,6 @@ progress {
     height: 100%;
     appearance: none;
     -webkit-appearance: none;
-    background-color: #e2dbdbef;
     border-radius: 15px;
     display: flex;
     animation: progressGrow 2s ease-out forwards;
@@ -359,9 +359,8 @@ progress {
         width: 100%;
     }
 }
-
 progress::-webkit-progress-bar {
-    background-color: #c9c5c5e2;
+    background-color: #b8cddb;
     border-radius: 15px;
 }
 
@@ -369,7 +368,6 @@ progress::-webkit-progress-value {
     background-color: #4dd051;
     border-radius: 15px;
 }
-
 #progressLabel {
     position: absolute;
     top: 50%;
@@ -378,5 +376,5 @@ progress::-webkit-progress-value {
     font-size: min(15px, 4vw);
     color: rgb(0, 0, 0);
     font-family: var(--fonteSecundaria);
-
 }
+
