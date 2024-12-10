@@ -3,23 +3,20 @@
 :root {
     --fontePrincipal: "Corinthia", cursive;
     --fonteSecundaria: "Arial", Helvetica, sans-serif;
-    --bordaPadrao: 2px solid black; 
+    --bordaPadrao: 2px solid #042a36; 
 
 }
 /* ---------------------------------- DEFINE O ESTILO BASE DO CORPO DA PÁGINA ---------------------------------- */
 body {
     margin: 0;
     font-family: var(--fontePrincipal);
-    color: #000000;
+    color: #042a36;
     background-color: white;
     background-size: cover;
     font-weight: 700;
     font-size: min(1.875rem, 5vw);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
-
-
-
 
 /* ---------------------------------- CONTAINER PRINCIPAL QUE CENTRALIZA O CONTEÚDO ---------------------------------- */
 .container {
@@ -45,11 +42,15 @@ body {
 .theme-toggle i {
     font-size: min(1.25rem, 3vw);
 }
+.theme-toggle .fa-moon {
+    color: #042a36; /* Define a cor azul */
+}
+
 
 /* ---------------------------------- PERSONALIZAÇÃO DO CONTEÚDO NO TEMA ESCURO ---------------------------------- */
 
 body.dark-mode {
-   background-color: #000;
+   background-color: #031b23;
     color: #ffffff;
 }
 
@@ -77,34 +78,33 @@ input {
     font-size: min(1rem, 3vw);
     width: 540px;
     max-width: 600px;
-    background-color: #000000;
+    background-color: #0b3143;
     color: #ffffff;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     box-sizing: border-box;
 }
 
 /* ---------------------------------- CONFG DO BOTÃO "ADICIONAR" ---------------------------------- */
-
 button.mais {
     padding: 10px 10px;
     height: 40px;
+    width: 2.5rem;
     font-size: min(1rem, 3vw);
-    color: #080707;
     border: var(--bordaPadrao);
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
+    background-color: white;
 }
 
 
-
 button.mais img {
-    width: min(24px, 5vw);
-    height: min(24px, 5vw);
+    width: min(23px, 5vw);
+    height: min(23px, 5vw);
 }
 
 button.mais:hover {
@@ -130,7 +130,7 @@ li {
     background-color: white;
     margin-top: 10px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
     word-break: break-word;
@@ -153,13 +153,13 @@ li {
 
 
 body.dark-mode li {
-    color: #d5c7c7;
-    background-color: #080707;
+    color: black;
+    background-color: white;
     border: 1px solid #333333;
 }
 
 body.dark-mode li .circle {
-    border-color: #ffffff; /* Borda branca para o círculo */
+    border-color:black ; /* Borda branca para o círculo */
 }
 
 body.dark-mode li.concluida {
@@ -169,10 +169,8 @@ body.dark-mode li.concluida {
 
 /* ---------------------------------- TEMA ESCURO - ÍCONES DENTRO DA LI ---------------------------------- */
 body.dark-mode li .icons img {
-    filter: brightness(0) saturate(100%) invert(100%); /* Inverte a cor dos ícones dentro de <li> para brancos */
+    filter:none; /* Inverte a cor dos ícones dentro de <li> para brancos */
 }
-
-
 
 li .circle {
     display: flex;
@@ -209,8 +207,7 @@ body.dark-mode li.concluida {
     text-decoration: line-through;
 }
 body.dark-mode li .circle {
-    border-color: #ffffff; /* Borda branca para o círculo */
-    background-color: rgba(255, 255, 255, 0.2)}
+    border: var(--bordaPadrao);}
 
 body.dark-mode li .circle img {
     filter: brightness(0) saturate(100%) invert(100%);}

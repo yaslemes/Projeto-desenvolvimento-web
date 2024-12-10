@@ -72,7 +72,7 @@ function addTask() {
            
             // Altera a imagem de fundo do círculo dependendo do estado da tarefa
             if (li.classList.contains('concluida')) {
-                circle.style.backgroundImage = 'url("imagens/concluidodark.png")';
+                circle.style.backgroundImage = 'url("imagens/verificar.png")';
                 circle.style.backgroundSize = 'cover';
             } else {
                 circle.style.backgroundImage = ''; 
