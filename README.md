@@ -18,7 +18,6 @@
   <li><strong>Modo Claro/Escuro</strong> - 🌗 Interface personalizável para o usuário.</li>
   <li><strong>Detecção de Eventos de Teclado (JS)</strong> - ⌨ Implementação de eventos como "keydown" para interação com a interface.</li>
   <li><strong>Interface Responsiva</strong> - 📱 Criamos uma interface adaptável para dispositivos móveis e desktop, utilizando técnicas de CSS como flexbox e media queries.</li>
-  <li><strong>Uso de Arrays e Objetos</strong> - Utilizamos arrays e objetos para manipulação eficiente de dados e tarefas no sistema.</li>
 </ul>
 
 
