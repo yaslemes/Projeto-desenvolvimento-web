@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/-Notion-%23000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion">
   </a>
   <a href="https://excalidraw.com" target="_blank">
-    <img src="https://img.shields.io/badge/-Excalidraw-%231E1E1E?style=for-the-badge&logoColor=white" alt="Excalidraw">
+    <img src="https://img.shields.io/badge/-Excalidraw-%231E1E1E?style=for-the-badge&logo=excalidraw&logoColor=white" alt="Excalidraw">
   </a>
 </div>
 
@@ -73,7 +73,15 @@
   </div>
 </h2>
 
-
+<h3 align="baseline">Ferramentas Utilizadas</h3>
+<div style="display: flex; justify-content: center; gap: 15px;">
+  <a href="https://www.notion.so" target="_blank">
+    <img src="https://img.shields.io/badge/-Notion-%23000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion">
+  </a>
+  <a href="https://excalidraw.com" target="_blank">
+    <img src="https://img.shields.io/badge/-Excalidraw-%231E1E1E?style=for-the-badge&logo=excalidraw&logoColor=white" alt="Excalidraw">
+  </a>
+</div>
 
 <div align="baseline">
   <p>📚 Este projeto visa aprimorar as habilidades em desenvolvimento web e interação com a interface.</p>
