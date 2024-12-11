@@ -60,7 +60,7 @@ body.dark-mode {
     color: #ffffff;
 }
 
-/* ---------------------------------- Area para responsividade ---------------------------------- */
+/* ---------------------------------- AREA PARA RESPONSIVIDADE---------------------------------- */
 #area{
     max-width: 70%;
     display: flex;
@@ -91,7 +91,7 @@ input {
     box-sizing: border-box;
 }
 
-/* ---------------------------------- CONFG DO BOTÃO "ADICIONAR" ---------------------------------- */
+/* ---------------------------------- CONFIGURAÇÃO DO BOTÃO "ADICIONAR" ---------------------------------- */
 button.mais {
     padding: 10px 10px;
     height: 40px;
@@ -170,7 +170,7 @@ body.dark-mode li .circle {
 }
 
 body.dark-mode li.concluida {
-    color: #777777; /* Cor mais clara para as tarefas concluídas */
+    color: #777777; 
     text-decoration: line-through;
 }
 
