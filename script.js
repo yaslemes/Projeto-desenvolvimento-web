@@ -78,6 +78,7 @@ function addTask() {
                 circle.style.backgroundImage = ''; 
             }
             updateProgress();  // Atualiza o progresso
+            updateTarefas();  // Atualiza o localStorage após a alteração
         });
 
         // Criação do texto da tarefa
@@ -95,6 +96,7 @@ function addTask() {
             if (textNode.isContentEditable) {
                 textNode.contentEditable = "false";
                 editar.src = 'imagens/lapis.png';
+                updateTarefas();
             } else {
                 textNode.contentEditable = "true";
                 textNode.focus(); 
@@ -112,6 +114,7 @@ function addTask() {
             // Remove a tarefa da lista
             li.remove();
             updateProgress();  // Atualiza o progresso
+            updateTarefas();  // Atualiza o localStorage após a remoção
         });
 
         // Contêiner de ícones (edição e exclusão)
@@ -131,11 +134,112 @@ function addTask() {
         taskInput.value = '';  // Limpa o campo de entrada
 
         updateProgress();  // Atualiza o progresso
+        updateTarefas();  // Atualiza o localStorage
     }
 }
 
-// Recarrega o tema salvo e atualiza o progresso ao carregar a página
+// Função para atualizar as tarefas no localStorage
+function updateTarefas() {
+    const tarefas = [];
+    const taskList = document.querySelectorAll('#taskList li');
+    
+    taskList.forEach((li) => {
+        const tarefa = {
+            texto: li.querySelector('span').textContent,
+            concluida: li.classList.contains('concluida')
+        };
+        tarefas.push(tarefa);
+    });
+    
+    // Salva a lista de tarefas no localStorage
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
+
+// Função para carregar as tarefas salvas no localStorage
+function carregarTarefas() {
+    const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
+    
+    tarefasSalvas.forEach((tarefa) => {
+        const li = document.createElement('li');
+        
+        // Criação do círculo que indica a conclusão da tarefa
+        const circle = document.createElement('div');
+        circle.classList.add('circle');
+        if (tarefa.concluida) {
+            li.classList.add('concluida');
+            circle.style.backgroundImage = 'url("imagens/verificar.png")';
+            circle.style.backgroundSize = 'cover';
+        }
+        
+        // Evento de clique no círculo para alternar o estado de conclusão
+        circle.addEventListener('click', function() {
+            li.classList.toggle('concluida');
+            if (li.classList.contains('concluida')) {
+                circle.style.backgroundImage = 'url("imagens/verificar.png")';
+                circle.style.backgroundSize = 'cover';
+            } else {
+                circle.style.backgroundImage = '';
+            }
+            updateTarefas();  // Atualiza o localStorage após a alteração
+            updateProgress();  // Atualiza o progresso
+        });
+        
+        // Texto da tarefa
+        const textNode = document.createElement('span');
+        textNode.textContent = tarefa.texto;
+        textNode.style.flex = "1";
+        
+        // Ícone de edição para modificar o texto da tarefa
+        const editar = document.createElement('img');
+        editar.src = 'imagens/lapis.png';
+        editar.alt = 'Editar';
+        editar.title = 'Editar tarefa';
+        editar.addEventListener('click', () => {
+            if (textNode.isContentEditable) {
+                textNode.contentEditable = "false";
+                editar.src = 'imagens/lapis.png';
+                // Atualiza o localStorage após salvar a edição
+                updateTarefas();
+            } else {
+                textNode.contentEditable = "true";
+                textNode.focus();
+                editar.src = 'imagens/salvar.png';
+                editar.title = 'Salvar';
+            }
+        });
+
+        // Ícone de exclusão para remover a tarefa
+        const lixeira = document.createElement('img');
+        lixeira.src = 'imagens/lixeira.png';
+        lixeira.alt = 'Excluir';
+        lixeira.title = 'Excluir tarefa';
+        lixeira.addEventListener('click', function() {
+            li.remove();
+            updateTarefas();  // Atualiza o localStorage após a remoção
+            updateProgress();  // Atualiza o progresso
+        });
+
+        // Contêiner de ícones (edição e exclusão)
+        const iconsContainer = document.createElement('div');
+        iconsContainer.classList.add('icons');
+        iconsContainer.appendChild(editar);
+        iconsContainer.appendChild(lixeira);
+
+        // Adiciona os elementos à tarefa
+        li.appendChild(circle);
+        li.appendChild(textNode);
+        li.appendChild(iconsContainer);
+
+        const taskList = document.getElementById('taskList');
+        taskList.appendChild(li);  // Adiciona a tarefa à lista
+    });
+
+    updateProgress();  // Atualiza o progresso na página inicial
+}
+
+// Recarrega as tarefas ao carregar a página
 window.addEventListener("load", () => {
+    carregarTarefas();  // Carrega as tarefas salvas
     const temaSalvo = localStorage.getItem("tema");
     if (temaSalvo === "escuro") {
         document.body.classList.add("dark-mode");
