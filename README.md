@@ -23,7 +23,7 @@
   - **Deletar:** Excluir tarefas indesejadas.
 - **Modo Claro/Escuro** - 🌗 Interface personalizável para o usuário.
 - **Detecção de Eventos de Teclado (JS)** - ⌨ Implementação de eventos como "keydown" para interação com a interface.
-- **Interface Responsiva** - 📱 Criamos uma interface adaptável para dispositivos móveis e desktop, utilizando técnicas de CSS como flexbox e media queries.
+- **Interface Responsiva** - 📱 Criamos uma interface adaptável para dispositivos móveis e desktop, utilizando técnicas de CSS como flexbox.
 
 ## 🧑‍💻 Autoras
 <div style="display: flex; justify-content: space-evenly; align-items: center; gap: 10px;">
